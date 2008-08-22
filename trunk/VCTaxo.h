@@ -29,8 +29,13 @@ public:
 	void Run(int arg);
 	void Term();
 
+	void Reset();
+	void StartAnalysis();
+	void Populate();
+
 private:
 	map<ea_t, shared_ptr<VCVMT>> _addr_to_vmt;
+	map<ea_t, shared_ptr<VCVirtualMethod>> _addr_to_virtualmethod;
 };
 
 extern VCTaxo g_vctaxo;

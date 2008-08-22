@@ -34,6 +34,7 @@ public:
 class VCBaseClass
 {
 public:
+	shared_ptr<VCClass> _owner;
 	shared_ptr<VCVMT> _vmt;
 };
 
@@ -41,7 +42,7 @@ class VCVMT
 {
 public:
 	ea_t _address;
-	shared_ptr<VCBaseClass> _baseclass;
+	shared_ptr<VCBaseClass> _owner;
 	vector<shared_ptr<VCVirtualMethod>> _virtualmethods;
 };
 
